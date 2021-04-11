@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace Algorithms
+namespace Utils
 {
     /// <summary>
-    /// This class is used for misurements. It counts the elapsed time between the calls of the two methods Start() and Stop()
-    /// If you want, you can go with StopWatch which does the same.
+    /// This class measures how much processor time took for a code to complete. 
     /// </summary>
     public class Timer
     {
