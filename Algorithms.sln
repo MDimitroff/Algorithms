@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.31112.23
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Algorithms", "Algorithms\Algorithms.csproj", "{42FBB979-2879-47CB-A2FC-B0D0FFEFD5A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utils", "Timer\Utils.csproj", "{F5E1EA19-25D2-411C-82D4-4DBCBC32E5BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Utils", "Utils\Utils.csproj", "{A5B92D77-37E1-4290-9C5B-54C68EC64BDF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{42FBB979-2879-47CB-A2FC-B0D0FFEFD5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42FBB979-2879-47CB-A2FC-B0D0FFEFD5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42FBB979-2879-47CB-A2FC-B0D0FFEFD5A8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F5E1EA19-25D2-411C-82D4-4DBCBC32E5BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F5E1EA19-25D2-411C-82D4-4DBCBC32E5BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F5E1EA19-25D2-411C-82D4-4DBCBC32E5BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F5E1EA19-25D2-411C-82D4-4DBCBC32E5BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5B92D77-37E1-4290-9C5B-54C68EC64BDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5B92D77-37E1-4290-9C5B-54C68EC64BDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5B92D77-37E1-4290-9C5B-54C68EC64BDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5B92D77-37E1-4290-9C5B-54C68EC64BDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
