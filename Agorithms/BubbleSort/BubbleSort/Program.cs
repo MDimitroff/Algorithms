@@ -1,4 +1,5 @@
 ﻿using System;
+using Utils;
 
 namespace BubbleSort
 {
@@ -6,7 +7,21 @@ namespace BubbleSort
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var array = new IntArray(10);
+            array.GenerateRandomValues(100);
+            Console.WriteLine("Unsorted array");
+            array.DisplayValues();
+            var arr = array.ToArray();
+
+            var algo = new BubbleSort();
+            algo.Sort(arr);
+
+            Console.WriteLine("Sorted array");
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write($"{arr[i]} ");
+            }
+
             Console.ReadLine();
         }
     }
