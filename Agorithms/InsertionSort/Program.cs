@@ -1,7 +1,7 @@
 ﻿using System;
 using Utils;
 
-namespace BubbleSort
+namespace InsertionSort
 {
     class Program
     {
@@ -13,7 +13,7 @@ namespace BubbleSort
             array.DisplayValues();
             var arr = array.ToArray();
 
-            BubbleSort.Sort(arr);
+            InsertionSort.Sort(arr);
 
             Console.WriteLine("Sorted array");
             for (int i = 0; i < arr.Length; i++)

@@ -17,12 +17,12 @@ namespace Utils
 
         public void Insert(int item)
         {
-            if (position + 1 > upperBound)
+            if (position > upperBound)
             {
                 throw new InvalidOperationException("Array's capacity is full.");
             }
 
-            innerArray[++position] = item;
+            innerArray[position++] = item;
         }
 
         public void DisplayValues()

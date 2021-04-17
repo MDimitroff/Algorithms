@@ -2,7 +2,7 @@
 {
     public class BubbleSort
     {
-        public void Sort(int[] array)
+        public static void Sort(int[] array)
         {
             int temp;
 
