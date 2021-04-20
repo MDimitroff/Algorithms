@@ -1,7 +1,7 @@
 ﻿using System;
 using Utils;
 
-namespace Sequential
+namespace SequentialSearch
 {
     class Program
     {
