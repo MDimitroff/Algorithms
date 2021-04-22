@@ -9,7 +9,7 @@ namespace CustomStack
         private int resizeIteration;
         private T[] array;
 
-        public int Lenght => index + 1;
+        public int Length => index + 1;
 
         public CustomStack()
         {
@@ -54,6 +54,14 @@ namespace CustomStack
             index = -1;
             resizeIteration = 0;
             Resize();
+        }
+
+        public void DisplayStatistics()
+        {
+            Console.WriteLine($"--- Stack statistics");
+            Console.WriteLine($"Items in stack {Length}");
+            Console.WriteLine($"Inner array length {array.Length}");
+            Console.WriteLine($"Resized {resizeIteration} times");
         }
 
         private void Resize()

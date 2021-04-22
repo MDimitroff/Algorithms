@@ -12,7 +12,7 @@ namespace CustomStack
             stack.Push("Adrian");
             stack.Push("Alexandra");
 
-            int stackLenght = stack.Lenght;
+            int stackLenght = stack.Length;
             Console.WriteLine($"Printing stack values. Stack length {stackLenght}");
 
             for (int i = 0; i < stackLenght; i++)
@@ -20,7 +20,15 @@ namespace CustomStack
                 Console.WriteLine($"{stack.Pop()}");
             }
 
-            Console.WriteLine($"Operation completed. Stack length {stack.Lenght}");
+            Console.WriteLine($"Operation completed. Stack length {stack.Length}");
+            Console.WriteLine("Adding many more elements to the stack to trigger resizing");
+
+            for (int i = 0; i < 100; i++)
+            {
+                stack.Push($"Martin {i}");
+            }
+
+            stack.DisplayStatistics();
         }
     }
 }
