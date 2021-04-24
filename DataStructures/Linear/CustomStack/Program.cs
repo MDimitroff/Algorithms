@@ -7,10 +7,10 @@ namespace CustomStack
         static void Main(string[] args)
         {
             var stack = new CustomStack<string>();
-            stack.Push("Martin");
-            stack.Push("Evgenia");
-            stack.Push("Adrian");
-            stack.Push("Alexandra");
+            stack.Push("Sofia");
+            stack.Push("Varna");
+            stack.Push("Burgas");
+            stack.Push("Plovdiv");
 
             int stackLenght = stack.Length;
             Console.WriteLine($"Printing stack values. Stack length {stackLenght}");
@@ -25,10 +25,15 @@ namespace CustomStack
 
             for (int i = 0; i < 100; i++)
             {
-                stack.Push($"Martin {i}");
+                stack.Push($"Sofia {i}");
             }
 
             stack.DisplayStatistics();
+
+            while (stack.Length > 0)
+            {
+                Console.WriteLine($"Value: {stack.Pop()}");
+            }
         }
     }
 }
