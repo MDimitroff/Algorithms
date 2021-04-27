@@ -8,7 +8,7 @@ namespace CustomQueue
         private int lowerIndex;
         private readonly double resizeFactor;
         private int resizeIteration;
-        private T[] array;
+        protected T[] array;
 
         public int Length => upperIndex - lowerIndex;
 
