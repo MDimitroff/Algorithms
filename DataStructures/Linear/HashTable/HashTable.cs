@@ -1,52 +1,100 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace HashTable
 {
-    public class HashTable<T>
+    public class HashTable<К, T> 
     {
         private T[] innerArray { get; set; }
+        public int Count { get; set; }
 
         public HashTable()
         {
             innerArray = new T[10007]; // Horner's rule
+            Count = 0;
         }
 
-        private int GetHashCode(string key)
+        public T this[int index]
         {
-            char[] chars = key.ToCharArray();
-            int total = 0;
-            for (int i = 0; i < chars.Length; i++)
+            get => GetValue(index);
+            set => SetValue(index, value);
+        }
+
+        public T this[string index]
+        {
+            get => GetValue(index);
+            set => SetValue(index, value);
+        }
+
+        private int GetHash<K>(K key)
+        {
+            int index = 0;
+            if (key is string str)
             {
-                total += 37 * total + (int)chars[i];
+                char[] chars = str.ToCharArray();
+                for (int i = 0; i < chars.Length; i++)
+                {
+                    index += 37 * index + chars[i];
+                }
+
+                index = index % innerArray.Length;
+                if (index < 0)
+                    index += innerArray.Length;
+            }
+            else if (key is int integer)
+            {
+                integer = ((integer >> 16) ^ integer) * 0x45d9f3b;
+                integer = ((integer >> 16) ^ integer) * 0x45d9f3b;
+                integer = (integer >> 16) ^ integer;
+                integer = integer % innerArray.Length;
+                index = integer;
+            }
+            else
+            {
+                throw new NotSupportedException("Not supported key type. Key can be either string or int.");
             }
 
-            total = total % innerArray.Length;
-            if (total < 0)
-                total += innerArray.Length;
-
-            return total;
+            return index;
         }
 
-        public void Add(string key, T value)
+        private T GetValue<K>(K key)
         {
-            var hash = GetHashCode(key);
+            var hash = GetHash(key);
+            return innerArray[hash];
+        }
+
+        private void SetValue<K>(K key, T value)
+        {
+            var hash = GetHash(key);
             innerArray[hash] = value;
         }
 
-        public T Get(string key)
+        public void Add<K>(K key, T value)
         {
-            var hash = GetHashCode(key);
+            var hash = GetHash(key);
+            innerArray[hash] = value;
+            Count++;
+        }
+
+        public T Get<K>(K key)
+        {
+            var hash = GetHash(key);
             var item = innerArray[hash];
 
             return item;
         }
 
+        public void Remove<K>(K key)
+        {
+            var hash = GetHash(key);
+            innerArray[hash] = default(T);
+            Count--;
+        }
+
         public void ShowDistribution()
         {
+            Console.WriteLine($"HashTable size {Count}");
+            Console.WriteLine("-------------------");
             for (int i = 0; i < innerArray.Length; i++)
             {
                 if (EqualityComparer<T>.Default.Equals(innerArray[i], default(T)))
@@ -56,6 +104,7 @@ namespace HashTable
 
                 Console.WriteLine($"[{i}] => {innerArray[i]}");
             }
+            Console.WriteLine("-----------------");
         }
     }
 }
