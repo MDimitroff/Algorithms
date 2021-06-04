@@ -31,7 +31,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomQueue", "DataStructur
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PriorityQueue", "DataStructures\Linear\PriorityQueue\PriorityQueue.csproj", "{3FDCBAE7-3ED6-4A0D-BA19-A6C033DEC0E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HashTable", "DataStructures\Linear\HashTable\HashTable.csproj", "{5F21710D-B742-437A-A77F-BE9CE8F5E760}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HashTable", "DataStructures\Linear\HashTable\HashTable.csproj", "{5F21710D-B742-437A-A77F-BE9CE8F5E760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueWithStack", "DataStructures\Linear\QueueWithStack\QueueWithStack.csproj", "{B2B4C5DF-5908-4455-BBD5-CF965CD8253D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{5F21710D-B742-437A-A77F-BE9CE8F5E760}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F21710D-B742-437A-A77F-BE9CE8F5E760}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F21710D-B742-437A-A77F-BE9CE8F5E760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2B4C5DF-5908-4455-BBD5-CF965CD8253D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2B4C5DF-5908-4455-BBD5-CF965CD8253D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2B4C5DF-5908-4455-BBD5-CF965CD8253D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2B4C5DF-5908-4455-BBD5-CF965CD8253D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -96,6 +102,7 @@ Global
 		{B718648F-FF3D-4142-93C6-D8B925314FB0} = {740A557C-1FAD-4568-918A-924280ED1925}
 		{3FDCBAE7-3ED6-4A0D-BA19-A6C033DEC0E4} = {740A557C-1FAD-4568-918A-924280ED1925}
 		{5F21710D-B742-437A-A77F-BE9CE8F5E760} = {740A557C-1FAD-4568-918A-924280ED1925}
+		{B2B4C5DF-5908-4455-BBD5-CF965CD8253D} = {740A557C-1FAD-4568-918A-924280ED1925}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18B0E4DF-7C7E-48F0-9998-E564FFA1280F}
