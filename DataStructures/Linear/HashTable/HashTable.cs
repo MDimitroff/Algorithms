@@ -17,13 +17,21 @@ namespace HashTable
         public T this[int index]
         {
             get => GetValue(index);
-            set => SetValue(index, value);
+            set
+            {
+                SetValue(index, value);
+                Count++;
+            }
         }
 
         public T this[string index]
         {
             get => GetValue(index);
-            set => SetValue(index, value);
+            set
+            {
+                SetValue(index, value);
+                Count++;
+            }
         }
 
         private int GetHash<K>(K key)

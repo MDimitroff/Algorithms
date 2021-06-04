@@ -17,7 +17,8 @@ namespace HashTable
                 while ((line = reader.ReadLine()) != null)
                 {
                     row++;
-                    hashTable.Add(row, line.Trim());
+                    hashTable[row] = line.Trim();
+                    //hashTable.Add(row, line.Trim());
                 }
             }
 
