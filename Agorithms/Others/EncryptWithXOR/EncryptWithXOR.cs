@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Text;
 
 namespace EncryptWithXOR
 {
@@ -20,6 +21,13 @@ namespace EncryptWithXOR
             }
 
             return result.ToArray();
+        }
+
+        public static byte[] EncryptOrDecrypt(byte[] inputText, string key)
+        {
+            string text = Encoding.UTF8.GetString(inputText);
+
+            return EncryptOrDecrypt(text, key);
         }
     }
 }

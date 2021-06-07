@@ -9,19 +9,14 @@ namespace EncryptWithXOR
         {
             string originalText = "Hello World!";
             string encryptionKey = "Sofia2021";
-            byte[] encryptedText, decryptedText = null;
-            string encryptedTexAsString, decryptedTexAsString = null;
 
-            encryptedText = EncryptWithXOR.EncryptOrDecrypt(originalText, encryptionKey);
-            encryptedTexAsString = Encoding.UTF8.GetString(encryptedText);
-
-            decryptedText = EncryptWithXOR.EncryptOrDecrypt(encryptedTexAsString, encryptionKey);
-            decryptedTexAsString = Encoding.UTF8.GetString(decryptedText);
+            byte[] encryptedText = EncryptWithXOR.EncryptOrDecrypt(originalText, encryptionKey);
+            byte[] decryptedText = EncryptWithXOR.EncryptOrDecrypt(encryptedText, encryptionKey);
 
             Console.WriteLine($"Value in plain text = {originalText}");
-            Console.WriteLine($"Encrypted text = {encryptedTexAsString}");
-            Console.WriteLine($"Decrypted text = {decryptedTexAsString}");
-            Console.WriteLine($"Does decrypted value equal to the plain text's value? {decryptedTexAsString == originalText}");
+            Console.WriteLine($"Encrypted text = { Encoding.UTF8.GetString(encryptedText) }");
+            Console.WriteLine($"Decrypted text = { Encoding.UTF8.GetString(decryptedText) }");
+            Console.WriteLine($"Does decrypted value equal to the plain text's value? { Encoding.UTF8.GetString(decryptedText) == originalText}");
         }
     }
 }
