@@ -37,7 +37,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueWithStack", "DataStruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{FF98D444-55A0-4D34-893F-0DAEB04A712E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncryptWithXOR", "Agorithms\Others\EncryptWithXOR\EncryptWithXOR.csproj", "{4F09748F-8A43-4238-AC91-B7AB9D7C2AF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EncryptWithXOR", "Agorithms\Others\EncryptWithXOR\EncryptWithXOR.csproj", "{4F09748F-8A43-4238-AC91-B7AB9D7C2AF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomLinkedList", "DataStructures\Linear\CustomLinkedList\CustomLinkedList.csproj", "{2B88C666-0ED3-4C6D-BA31-07D3451A20E0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +95,10 @@ Global
 		{4F09748F-8A43-4238-AC91-B7AB9D7C2AF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F09748F-8A43-4238-AC91-B7AB9D7C2AF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F09748F-8A43-4238-AC91-B7AB9D7C2AF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B88C666-0ED3-4C6D-BA31-07D3451A20E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B88C666-0ED3-4C6D-BA31-07D3451A20E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B88C666-0ED3-4C6D-BA31-07D3451A20E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B88C666-0ED3-4C6D-BA31-07D3451A20E0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -113,6 +119,7 @@ Global
 		{B2B4C5DF-5908-4455-BBD5-CF965CD8253D} = {740A557C-1FAD-4568-918A-924280ED1925}
 		{FF98D444-55A0-4D34-893F-0DAEB04A712E} = {58284307-5B34-448A-8778-185DEA9B466A}
 		{4F09748F-8A43-4238-AC91-B7AB9D7C2AF6} = {FF98D444-55A0-4D34-893F-0DAEB04A712E}
+		{2B88C666-0ED3-4C6D-BA31-07D3451A20E0} = {740A557C-1FAD-4568-918A-924280ED1925}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18B0E4DF-7C7E-48F0-9998-E564FFA1280F}
