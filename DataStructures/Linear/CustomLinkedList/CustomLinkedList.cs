@@ -20,7 +20,7 @@ namespace CustomLinkedList
             return node != null;
         }
 
-        public void Add(T item)
+        public void Insert(T item)
         {
             var newNode = new Node<T>(item);
             Count++;
@@ -46,6 +46,31 @@ namespace CustomLinkedList
             newNode.Link = afterNode.Link;
             afterNode.Link = newNode;
             Count++;
+        }
+
+        public void Remove(T item)
+        {
+            var current = header;
+            Node<T> previousNode = null;
+
+            while (current.Link != null)
+            {
+                if (EqualityComparer<T>.Default.Equals(current.Item, item))
+                {
+                    previousNode.Link = current.Link;
+                    Count--;
+                    break;
+                }
+
+                previousNode = current;
+                current = current.Link;
+            }
+        }
+
+        public void Clear()
+        {
+            header.Link = null;
+            Count = 0;
         }
 
         public void Dump()
