@@ -83,7 +83,7 @@ namespace CustomLinkedList
                 T item = current.Item;
                 current = current.Link;
 
-                if (EqualityComparer<T>.Default.Equals(item, default))
+                if (EqualityComparer<T>.Default.Equals(item, default)) // skip the header
                     continue;
 
                 Console.WriteLine($"{item}");
