@@ -93,6 +93,28 @@ namespace CustomLinkedList
             Console.WriteLine();
         }
 
+        public void ReverseItems()
+        {
+            var values = new Stack<T>();
+            var current = header;
+            while (current.Link != null)
+            {
+                current = current.Link;
+                T item = current.Item;
+
+                if (EqualityComparer<T>.Default.Equals(item, default))
+                    continue;
+
+                values.Push(current.Item);
+            }
+
+            Console.WriteLine("List's items in reversed order");
+            while (values.Count > 0)
+            {
+                Console.WriteLine(values.Pop());
+            }
+        }
+
         private Node<T> Find(T item)
         {
             var currentNode = header;
