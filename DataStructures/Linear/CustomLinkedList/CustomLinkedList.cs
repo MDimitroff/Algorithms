@@ -97,16 +97,19 @@ namespace CustomLinkedList
         {
             var values = new Stack<T>();
             var current = header;
+
             while (current.Link != null)
             {
-                current = current.Link;
                 T item = current.Item;
+                current = current.Link;
 
                 if (EqualityComparer<T>.Default.Equals(item, default))
                     continue;
 
-                values.Push(current.Item);
+                values.Push(item);
             }
+
+            values.Push(current.Item);
 
             Console.WriteLine("List's items in reversed order");
             while (values.Count > 0)
