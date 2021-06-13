@@ -16,10 +16,19 @@ namespace BinarySearchTree
             bst.Insert(22);
 
             Console.WriteLine("InOrder traversal:");
-            bst.InOrder(bst.RootNode);
+            bst.DisplayBinarySearchTree();
 
-            Console.WriteLine($"Value exists? {bst.Exists(2)}");
+            Console.WriteLine($"Value 2 exists? {bst.Exists(2)}");
+            Console.WriteLine($"Min value is {bst.FindMin()}");
+            Console.WriteLine($"Max value is {bst.FindMax()}");
 
+            Console.WriteLine("Deleting value 37");
+            bst.Delete(37);
+            bst.DisplayBinarySearchTree();
+
+            Console.WriteLine("Deleting value 45");
+            bst.Delete(45);
+            bst.DisplayBinarySearchTree();
 
         }
     }
