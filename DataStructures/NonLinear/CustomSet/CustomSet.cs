@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 
 namespace CustomSet
 {
@@ -93,6 +94,16 @@ namespace CustomSet
             }
 
             return true;
+        }
+
+        public void Dump()
+        {
+            Console.WriteLine($"Set's length is {Size}.Content of the set is:");
+
+            foreach (var item in _data.Values)
+            {
+                Console.WriteLine(item);
+            }
         }
 
         private string GetHashCode(string item)
