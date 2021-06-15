@@ -45,7 +45,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BinarySearchTree", "DataStr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NonLinear", "NonLinear", "{79E76E62-A707-4FC2-AD12-B8B94EF42641}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomSet", "DataStructures\NonLinear\CustomSet\CustomSet.csproj", "{A5CE6D54-8A63-462D-A41E-C020311D16A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomSet", "DataStructures\NonLinear\CustomSet\CustomSet.csproj", "{A5CE6D54-8A63-462D-A41E-C020311D16A5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShellSort", "Agorithms\Sorting\ShellSort\ShellSort.csproj", "{EC9851B3-719F-4E9B-BDD9-ADA54A15EC8C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +115,10 @@ Global
 		{A5CE6D54-8A63-462D-A41E-C020311D16A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5CE6D54-8A63-462D-A41E-C020311D16A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5CE6D54-8A63-462D-A41E-C020311D16A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC9851B3-719F-4E9B-BDD9-ADA54A15EC8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC9851B3-719F-4E9B-BDD9-ADA54A15EC8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC9851B3-719F-4E9B-BDD9-ADA54A15EC8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC9851B3-719F-4E9B-BDD9-ADA54A15EC8C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -137,6 +143,7 @@ Global
 		{BF4B2443-E615-436E-99CA-AFDB6C3E16A2} = {79E76E62-A707-4FC2-AD12-B8B94EF42641}
 		{79E76E62-A707-4FC2-AD12-B8B94EF42641} = {92D1CE40-BBB1-400F-965F-08243923B35E}
 		{A5CE6D54-8A63-462D-A41E-C020311D16A5} = {79E76E62-A707-4FC2-AD12-B8B94EF42641}
+		{EC9851B3-719F-4E9B-BDD9-ADA54A15EC8C} = {F2C45A64-4B4E-48CE-8B9C-19FE291A9153}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {18B0E4DF-7C7E-48F0-9998-E564FFA1280F}
