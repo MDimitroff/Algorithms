@@ -8,20 +8,24 @@ namespace HeapSort
         {
             Console.WriteLine("HeapSort algorithm");
 
-            var heap = new HeapSort(size: 9);
-            var random = new Random();
+            int[] arr = { 55, 25, 89, 34, 12, 19, 78, 95, 1, 100 };
+            int n = 10, i;
+            
+            Console.WriteLine("Heap Sort");
+            Console.Write("Initial array is: ");
 
-            for (int i = 0; i < 9; i++)
+            for (i = 0; i < n; i++)
             {
-                int value = random.Next(1, 100);
-                heap.Insert(value);
+                Console.Write(arr[i] + " ");
             }
 
-            Console.WriteLine("Before sorting the values:");
-            heap.Dump();
-            Console.WriteLine("After sorting the values:");
-            heap.Sort();
-            heap.Dump();
+            HeapSort.Sort(arr, 10);
+
+            Console.Write("\nSorted Array is: ");
+            for (i = 0; i < n; i++)
+            {
+                Console.Write(arr[i] + " ");
+            }
         }
     }
 }

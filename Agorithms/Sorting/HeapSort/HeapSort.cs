@@ -1,113 +1,45 @@
 ﻿using System;
 
+/// <summary>
+/// Reference https://www.tutorialspoint.com/heap-sort-in-chash
+/// </summary>
 namespace HeapSort
 {
     public class HeapSort
     {
-        public int Size { get; set; }
-        private int _currentSize;
-        private readonly Node[] _heapArray;
-
-        public HeapSort(int size)
+        public static void Sort(int[] arr, int n)
         {
-            Size = size;
-            _heapArray = new Node[size];
-            _currentSize = 0;
-        }
+            for (int i = n / 2 - 1; i >= 0; i--)
+                Heapify(arr, n, i);
 
-        public void Sort()
-        {
-            int leftPart = Size / 2;
-
-            for (int i = leftPart - 1; i > 0; i--)
+            for (int i = n - 1; i >= 0; i--)
             {
-                ShiftDown(i);
+                int temp = arr[0];
+                arr[0] = arr[i];
+                arr[i] = temp;
+                Heapify(arr, i, 0);
             }
         }
 
-        public void Insert(int value)
+        static void Heapify(int[] arr, int n, int i)
         {
-            if (_currentSize == Size)
+            int largest = i;
+            int left = 2 * i + 1;
+            int right = 2 * i + 2;
+
+            if (left < n && arr[left] > arr[largest])
+                largest = left;
+
+            if (right < n && arr[right] > arr[largest])
+                largest = right;
+
+            if (largest != i)
             {
-                throw new ArgumentOutOfRangeException("The array went out of range");
-            }
+                int swap = arr[i];
+                arr[i] = arr[largest];
+                arr[largest] = swap;
 
-            var newNode = new Node(value);
-            _heapArray[_currentSize] = newNode;
-            ShiftUp(_currentSize);
-            _currentSize++;
-        }
-
-        public void Remove(int value)
-        {
-            _currentSize--;
-
-            _heapArray[0] = _heapArray[_currentSize];
-            ShiftDown(0);
-        }
-
-        public void Dump()
-        {
-            foreach (var item in _heapArray)
-            {
-                Console.Write($"{item.Value} ");
-            }
-            Console.WriteLine();
-        }
-
-        private void ShiftUp(int index)
-        {
-            int parent = (index - 1) / 2;
-            var bottom = _heapArray[index];
-
-            while (index > 0 && _heapArray[parent].Value < bottom.Value)
-            {
-                _heapArray[index] = _heapArray[parent];
-                index = parent;
-                parent = (index - 1) / 2;
-            }
-
-            _heapArray[index] = bottom;
-        }
-
-        private void ShiftDown(int index)
-        {
-            int largerChild;
-            var topNode = _heapArray[index];
-
-            while (index < _currentSize / 2)
-            {
-                int leftChild = 2 * index + 1;
-                int rightChild = leftChild + 1;
-
-                if (rightChild < _currentSize && _heapArray[leftChild].Value < _heapArray[rightChild].Value)
-                {
-                    largerChild = rightChild;
-                }
-                else
-                {
-                    largerChild = leftChild;
-                }
-
-                if (topNode.Value >= _heapArray[largerChild].Value)
-                {
-                    break;
-                }
-
-                _heapArray[index] = _heapArray[largerChild];
-                index = largerChild;
-            }
-
-            _heapArray[index] = topNode;
-        }
-
-        public class Node
-        {
-            public int Value { get; set; }
-
-            public Node(int key)
-            {
-                Value = key;
+                Heapify(arr, n, largest);
             }
         }
     }
